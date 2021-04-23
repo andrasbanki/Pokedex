@@ -1,4 +1,4 @@
-/* Added IIFE*/ 
+/* IIFE */ 
 
 let pokemonRepository = (function () {
   let pokemonList = [
@@ -24,19 +24,38 @@ let pokemonRepository = (function () {
   }
 
   function add(pokemon) {
-    if(typeof pokemon === 'object'){
+    if(typeof pokemon === 'object') {
     pokemonList.push(pokemon);
   }
   }
 
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+
+    button.innerText = pokemon.name;
+    button.classList.add('button-class');
+    button.addEventListener('click', function() {
+      showDetails(pokemon);
+    })
+    
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }  
+
   return {
     getAll: getAll,
-    add: add
+    add: add,
+    addListItem: addListItem,
+    showDetails: showDetails
   };
 })();
 
-/* Added forEach loop */
-
 pokemonRepository.getAll().forEach(function (pokemon) {
-  document.write(pokemon.name + ':  height: ' + pokemon.height + ', type: ' + pokemon.type + '<br>');
-  });
+  pokemonRepository.addListItem(pokemon);
+});
