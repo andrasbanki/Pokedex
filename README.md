@@ -1,6 +1,6 @@
 # Simple Pokédex JavaScript App
 
-Latest update: 26.04.2021
+Latest update: 28.04.2021
 
 ## Project Description
 This is a small web application with HTML, CSS, and JavaScript that loads
@@ -13,4 +13,5 @@ This Project will use
 * HTML
 * CSS
 * JavaScript
+ 
  
