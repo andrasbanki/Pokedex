@@ -4,8 +4,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
-  padding-top: 125px;
-  text-align: center;
   width: 100%;
 }
 
@@ -26,8 +24,74 @@ h3 {
 
 .list-group-item {
   background-color: #ffcb05;
+  top: 125px;
+  text-align: center;
+  position: relative;
 }
 
-.button {
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+  height: 125px;
+  bottom: 15px; 
+  background-color:#cadee4;
+}
 
+.pokemons {
+  position: relative;
+}
+ 
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  background-color: #cadee4;
+}
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #3a6896;
+  border-color: rgb(46, 66, 129);
+}
+
+.modal-header {
+  background-color: white;
+}
+
+.modal-title {
+
+}
+
+.modal-content {
+  background-color: #cadee4;
+}
+
+@media all and (max-width: 705px) {
+  .navbar {
+    display: block;
+  }
+}
+
+@media (max-width: 705px) {
+  .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  }
+}
+
+@media (max-width: 705px) {
+  .list-group-item {
+    top: 200px;
+  }
 }
