@@ -4,6 +4,16 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
+  const searchBar = document.getElementById('searchBar');
+  
+  searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const filteredPokemon = pokemonList.filter((pokemon) => {
+      return pokemon.name.toLowerCase().includes(searchString);
+    });
+    console.log(filteredPokemon);
+  });
+
   // function for push pokemons
 
   function add(pokemon) {
