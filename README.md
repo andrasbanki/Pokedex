@@ -1,6 +1,6 @@
 # Simple Pokédex JavaScript App
 
-![Screenshot](https://github.com/andrasbanki/meet/raw/main/img/Pokedex.png)
+![Screenshot](https://github.com/andrasbanki/Pokedex/raw/main/img/Pokedex.png)
 
 Latest update: 25.08.2021
 
